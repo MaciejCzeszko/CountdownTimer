@@ -1,8 +1,9 @@
 const countdown = document.querySelector(".countdown");
-const countdownMinutes = 100;
+const countdownMinutes = 0.1;
 let time = countdownMinutes * 60;
 
 function updateTime() {
+  if (time < 0) return;
   const minutes = Math.floor(time / 60);
   let seconds = time % 60;
 
